@@ -1,0 +1,11 @@
+site_name: 1040ez
+site_description: A simple web app to prepare 1040ez
+repo_url: https://github.com/desenna/1040ez
+site_dir: site
+copyright: Copyright &copy; 2018, <a href="https://github.com/desenna">desenna</a>.
+
+pages:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'
