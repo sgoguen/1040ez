@@ -28,7 +28,7 @@ docker-compose up
 
 Deployment is automated via Travis. When builds pass on the master or qa branch, Travis will deploy that branch to Heroku. Enable this by:
 
-Initializing the production sever:
+Initializing the production server:
 
 ```
 heroku create 1040ez-prod --remote prod && \
