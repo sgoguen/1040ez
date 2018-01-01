@@ -14,13 +14,13 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login --username=_ --password="$HEROKU_AUTH_TOKEN" registry.heroku.com;
-    docker tag web registry.heroku.com/1040ez-prod/web;
-    docker push registry.heroku.com/1040ez-prod/web;
+    docker tag web registry.heroku.com/ez1040-prod/web;
+    docker push registry.heroku.com/ez1040-prod/web;
     fi
   - if [ "$TRAVIS_BRANCH" == "qa" ]; then
     docker login --username=_ --password="$HEROKU_AUTH_TOKEN" registry.heroku.com;
-    docker tag web registry.heroku.com/1040ez-qa/web;
-    docker push registry.heroku.com/1040ez-qa/web;
+    docker tag web registry.heroku.com/ez1040-qa/web;
+    docker push registry.heroku.com/ez1040-qa/web;
     fi
 
 notifications:
@@ -28,3 +28,7 @@ notifications:
 
 cache:
   pip: true
+
+env:
+  global:
+    secure: jFGFV4KhJliHJXIcv7iBAYw2ncudggkyIw5SL+NcduVMqGFdakpzQNd6HhGTNVwu0b8XdvqdOYYA4Co46FyMjaTEBeXH98RhSksl9iGRzwiiDfT7+nriNB6awav1IidY2BST4E5aS4GCxmbKYRoyYDmztZZT5C50FM/RDBvAjBPZA+LfoBSpS/IaCx2LKu9/fwfvnvVRMqtjoR2391s4RsSLrXrI+bQqGQcu87HwcYqk/oStEaNr5BXeTB3fOOVh9EZtP1Gzt0rK3YUWILoVhVNj5vcbOGeFL5IpHwHlDoZwz1/zuj/zQHbgYT6fI7FvK3hCPW8V0BRh9OuzUQTrNc8gVv5p+ddTy/XbaAAEzoU8sLWzyLzaFWs/uAXjeskAk6lF4MQh/MFsleCTTwmZ/fs0QcLtvJtMvBfEwJoOiC8T3oOywv2gEp19IG+fSHDu0Mr7GUWRQ0BVhOkGr+N1knJeDc4qmpDUapiXDDm7goWzcOz4gOr0OF4KE0Mt7wlC7dDIzZ+IWEXT5hm+f0Gm92R8D5VOaVFe+eyZhx1zN4QXNHge9x60aoTo0f4jDCzEjYtPUa1vRa8OMZ+1lHan7524j+gwsJwjOOGwbqF0Kbqeziow8lEdfjhTS+6fqwLHOWe9LCQVkEdoBLKTdo090Sp7WQroscZgLPhoGQGNuO8=

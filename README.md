@@ -31,20 +31,20 @@ Deployment is automated via Travis. When builds pass on the master or qa branch,
 Initializing the production server:
 
 ```
-heroku create 1040ez-prod --remote prod && \
-    heroku addons:create newrelic:wayne --app 1040ez-prod && \
-    heroku addons:create heroku-postgresql:hobby-dev --app 1040ez-prod && \
+heroku create ez1040-prod --remote prod && \
+    heroku addons:create newrelic:wayne --app ez1040-prod && \
+    heroku addons:create heroku-postgresql:hobby-dev --app ez1040-prod && \
     heroku config:set DJANGO_SECRET=`openssl rand -base64 32` \
         DJANGO_AWS_ACCESS_KEY_ID="Add your id" \
         DJANGO_AWS_SECRET_ACCESS_KEY="Add your key" \
         DJANGO_AWS_STORAGE_BUCKET_NAME="1040ez-prod" \
-        --app 1040ez-prod
+        --app ez1040-prod
 ```
 
 Initializing the qa server:
 
 ```
-heroku create `1040ez-qa --remote qa && \
+heroku create `ez1040-qa --remote qa && \
     heroku addons:create newrelic:wayne && \
     heroku addons:create heroku-postgresql:hobby-dev && \
     heroku config:set DJANGO_SECRET=`openssl rand -base64 32` \
