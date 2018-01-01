@@ -41,7 +41,7 @@ heroku create 1040ez-prod --remote prod && \
         --app 1040ez-prod
 ```
 
-Initializing the qa sever:
+Initializing the qa server:
 
 ```
 heroku create `1040ez-qa --remote qa && \
